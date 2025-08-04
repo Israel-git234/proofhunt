@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ProofHunt 🏆 The Ultimate On-Chain Game</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="toast-container"></div>
+
+  <div id="register-modal" class="modal-overlay hidden">
+    <div class="modal-content glass-card">
+      <h2><i class="fas fa-user-plus"></i> Join the Hunt</h2>
+      <p>Create your legendary hunter profile.</p>
+      <input type="text" id="username-input" placeholder="Enter your hunter name..." />
+      <input type="text" id="avatar-input" placeholder="Enter avatar URL (optional)..." />
+      <button id="register-button" class="btn-primary">
+        <i class="fas fa-rocket"></i> Start Your Legend
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1 class="neon-text">ProofHunt</h1>
+      <p>The Ultimate On-Chain Gaming Experience on Etherlink</p>
+      <div id="connection-status" class="glass-card">
+        <button id="connectButton" class="btn-primary">
+          <i class="fas fa-wallet"></i> Connect Wallet to Play
+        </button>
+      </div>
+    </header>
+
+    <main id="game-content" class="hidden">
+      <div class="stats-bar glass-card">
+        <div>
+          <div id="total-players" class="stat-value">-</div>
+          <div class="stat-label">Active Hunters</div>
+        </div>
+        <div>
+          <div id="total-rounds" class="stat-value">-</div>
+          <div class="stat-label">Rounds Played</div>
+        </div>
+        <div>
+          <div id="total-submissions" class="stat-value">-</div>
+          <div class="stat-label">Total Submissions</div>
+        </div>
+        <div>
+          <div id="prize-pool" class="stat-value">🏆</div>
+          <div class="stat-label">Glory & Honor</div>
+        </div>
+      </div>
+
+      <div class="main-grid">
+        <section class="challenge-section glass-card">
+          <div class="round-header">
+            <h2 id="round-title"><i class="fas fa-bullseye"></i> Current Round</h2>
+            <div id="timer" class="timer-display">00:00</div>
+          </div>
+          <div id="challenge-prompt" class="challenge-prompt">
+            Waiting for the next epic challenge...
+          </div>
+          <div id="submission-area" class="hidden">
+            <input
+              type="text"
+              id="proof-url-input"
+              placeholder="Paste your proof image URL here..."
+            />
+            <button id="submit-button" class="btn-primary">
+              <i class="fas fa-paper-plane"></i> Submit Proof
+            </button>
+          </div>
+          <hr />
+          <h3><i class="fas fa-images"></i> Live Submissions</h3>
+          <div id="submissions-list" class="submissions-list">
+            <p>Waiting for submissions...</p>
+          </div>
+        </section>
+
+        <aside class="profile-section">
+          <div class="player-profile glass-card">
+            <h2><i class="fas fa-user-circle"></i> Your Profile</h2>
+            <div id="profile-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div id="profile-username">Hunter</div>
+            <div class="profile-stats">
+              <div>
+                <span class="stat-label"><i class="fas fa-star"></i> Cred Score</span>
+                <span id="profile-cred-score">0</span>
+              </div>
+              <div>
+                <span class="stat-label"><i class="fas fa-medal"></i> Rank</span>
+                <span id="profile-rank">#-</span>
+              </div>
+            </div>
+          </div>
+          <div class="leaderboard glass-card">
+            <h2><i class="fas fa-crown"></i> Hall of Fame</h2>
+            <div id="leaderboard">
+              <p>Legends will appear here...</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section id="gm-panel" class="glass-card hidden">
+        <h2><i class="fas fa-crown"></i> Game Master Controls</h2>
+        <div id="start-round-panel">
+          <input
+            type="text"
+            id="new-challenge-input"
+            placeholder="Enter challenge description..."
+          />
+          <input
+            type="number"
+            id="duration-input"
+            placeholder="Duration in seconds (e.g., 300)"
+          />
+          <button id="start-round-button" class="btn-primary">Launch New Round</button>
+        </div>
+        <div id="end-round-panel" class="hidden">
+          <button id="end-round-button" class="btn-danger">End Round & Crown Winner</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

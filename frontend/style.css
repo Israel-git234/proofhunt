@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #020024, #090979, #00d4ff);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow:
+    0 0 20px rgba(0, 212, 255, 0.6),
+    inset 0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+h1.neon-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  color: #00d4ff;
+  text-shadow:
+    0 0 5px #00d4ff,
+    0 0 10px #00d4ff,
+    0 0 20px #00d4ff,
+    0 0 40px #00d4ff;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.1em;
+}
+
+.stats-bar {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+}
+
+.stat-value {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  color: #00f6ff;
+  text-shadow: 0 0 10px #00f6ff;
+}
+
+.stat-label {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #b0eefd;
+  margin-top: 0.3rem;
+  user-select: none;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow:
+    0 0 40px rgba(0, 212, 255, 0.9),
+    inset 0 0 50px rgba(0, 212, 255, 0.4);
+}
+
+button.btn-primary {
+  background: linear-gradient(90deg, #00d4ff, #0059ff);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 0 15px #00d4ff;
+}
+
+button.btn-primary:hover {
+  background: linear-gradient(90deg, #0059ff, #00d4ff);
+  box-shadow: 0 0 25px #00f6ff;
+  transform: scale(1.05);
+}
+
+button.btn-primary:disabled {
+  background: #777;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.timer-display {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.7rem;
+  background: rgba(0, 212, 255, 0.2);
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  color: #00f6ff;
+  text-shadow: 0 0 10px #00f6ff;
+  user-select: none;
+}
+
+#challenge-prompt {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #b0eefd;
+  text-align: center;
+  min-height: 60px;
+}
+
+.submissions-list {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 0.5rem;
+}
+
+.submission-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+  padding: 0.4rem;
+  border-radius: 12px;
+  background: rgba(0, 212, 255, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submission-item:hover {
+  background: rgba(0, 212, 255, 0.3);
+}
+
+.submission-item img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 0 10px #00f6ff;
+}
+
+#profile-avatar i,
+#profile-avatar img {
+  font-size: 60px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00d4ff;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  background: rgba(0, 212, 255, 0.15);
+}
+
+.profile-stats {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 600;
+  color: #b0eefd;
+}
+
+.leaderboard {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 1rem;
+}
+
+.leaderboard-item {
+  padding: 0.7rem;
+  border-radius: 12px;
+  margin-bottom: 0.4rem;
+  background: rgba(0, 212, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  cursor: default;
+  transition: background-color 0.3s ease;
+}
+
+.leaderboard-item:hover {
+  background: rgba(0, 212, 255, 0.3);
+}
+
+.leaderboard-item .username {
+  color: #00e5ff;
+}
+
+.leaderboard-item .score {
+  color: #00f6ff;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow:
+    0 0 40px rgba(0, 212, 255, 0.8);
+  color: #00e5ff;
+  text-align: center;
+  user-select: none;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin: 0.7rem 0 1.2rem;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #00f6ff;
+  box-shadow: inset 0 0 10px rgba(0, 212, 255, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  background: rgba(0, 212, 255, 0.4);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(0, 212, 255, 0.25);
+  margin: 1rem 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #00d4ff;
+  color: #000;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  font-weight: 700;
+  box-shadow: 0 0 20px #00d4ff;
+  animation: slideInOut 4s ease forwards;
+  user-select: none;
+  z-index: 10000;
+}
+
+@keyframes slideInOut {
+  0% { opacity: 0; transform: translateX(100%); }
+  10% { opacity: 1; transform: translateX(0); }
+  90% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(100%); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+  .main-grid {
+    display: block;
+  }
+  .challenge-section,
+  .profile-section {
+    margin-bottom: 1.5rem;
+  }
+  .stats-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
