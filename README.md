@@ -1,4 +1,6 @@
-ProofHunt 🏆 The Ultimate On-Chain Game
+ProofHunt 🏆 
+
+The Ultimate On-Chain Game
 Introduction
 ProofHunt is an innovative decentralized game built on the Ethereum blockchain (specifically designed for Etherlink, leveraging its speed and low transaction costs). It challenges players to submit real-world "proofs" (e.g., photos, videos) based on a given challenge, vote on each other's submissions, and compete for reputation and unique NFT trophies. It's a social, competitive experience that brings real-world interaction onto the blockchain.
 
