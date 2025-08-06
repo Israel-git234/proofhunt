@@ -63,10 +63,10 @@ Improved Error Handling: More user-friendly error messages and robust retry mech
 
 Mobile Responsiveness: Further optimize the UI for a seamless experience on mobile devices.
 ## 🚀 Live Demo
-[Live site (optional)]()
+[Live site
 
 ## 📽️ Demo Video
-[Watch on YouTube](h
+[Watch on YouTube]
 
 
 
